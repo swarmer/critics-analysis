@@ -19,7 +19,7 @@ class CriticsSpider(scrapy.Spider):
         if not isinstance(contents, (bytes, str)):
             contents = json.dumps(contents)
 
-        with open(path, mode) as f:
+        with open(str(path), mode) as f:
             f.write(contents)
 
         self.log('Saved file %s' % path)
