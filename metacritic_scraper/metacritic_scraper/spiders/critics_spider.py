@@ -60,6 +60,11 @@ class CriticsSpider(scrapy.Spider):
         publication_title = response.css('div.publication_title > a::text').extract_first()
 
         try:
+            os.mkdir(self.data_dir)
+        except FileExistsError:
+            pass
+
+        try:
             os.mkdir(self.data_dir / critic_id)
         except FileExistsError:
             pass

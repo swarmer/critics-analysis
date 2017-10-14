@@ -105,3 +105,5 @@ ENV/
 
 env3/
 
+metacritic_scraper/scraped_data/
+
