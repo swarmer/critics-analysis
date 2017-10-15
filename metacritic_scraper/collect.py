@@ -56,7 +56,7 @@ if __name__ == '__main__':
     reviewers, reviews = collect()
 
     with open('reviewers.msgpack', 'wb') as reviewers_file:
-        msgpack.dump(reviewers_file, reviewers)
+        msgpack.dump(reviewers, reviewers_file)
 
     with open('reviews.msgpack', 'wb') as reviews_file:
-        msgpack.dump(reviews_file, reviews)
+        msgpack.dump(reviews, reviews_file)
