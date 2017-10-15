@@ -107,3 +107,7 @@ env3/
 
 metacritic_scraper/scraped_data/
 
+_backup/
+reviewers.msgpack
+reviews.msgpack
+
