@@ -20,7 +20,7 @@ def collect():
         with open(os.path.join(dirpath, '__meta')) as metafile:
             file_count += 1
             if file_count % 1000 == 0:
-                print(f'Processed {file_count} files')
+                print('Processed %d files' % file_count)
 
             metadata = json.load(metafile)
 
@@ -41,7 +41,7 @@ def collect():
             with open(os.path.join(dirpath, review_path)) as review_file:
                 file_count += 1
                 if file_count % 1000 == 0:
-                    print(f'Processed {file_count} files')
+                    print('Processed %d files' % file_count)
 
                 review_data = json.load(review_file)
                 review_data['reviewer'] = reviewer_key
